@@ -1,12 +1,15 @@
 <! doctype html>
 <html lang="en-US">
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Polls Index</title>
     </head>
     <body>
         <div>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
             {% if latest_question_list %}
                 <ul>
                 {% for question in latest_question_list %}
